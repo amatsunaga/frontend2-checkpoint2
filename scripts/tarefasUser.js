@@ -15,7 +15,6 @@ function logOutUser() {
 function taskRender() {
 
     for (const task of taskList) {
-
         ulTarefasRef.innerHTML += `
         <li class="tarefa">
         <div class="not-done"></div>
@@ -24,11 +23,8 @@ function taskRender() {
           <p class="timestamp">${task.createdAt}</p>
         </div>
       </li>
-        
         `
-
     }
-
 }
 
 function creatTask() {
@@ -64,6 +60,24 @@ let requestConfigurationPost = {
     headers: requestHeaders
 };
 
+let requestConfigurationDelete = {
+    method: "DELETE",
+    //path: JSON.stringify(deleteTask), a api nao requer um body para o metodo DELETE, apenas o JWT token
+    headers: requestHeaders
+};
+
+let deleteTask = 6029 // variável que recebe o ID da task obs: nao confundir com id do array da task. 
+
+fetch(
+    "https://ctd-todo-api.herokuapp.com/v1/tasks/" + deleteTask,
+    requestConfigurationDelete
+).then(response => {
+    response.json().then(data => {
+
+        console.log(data)
+
+    });
+});
 
 fetch(
     "https://ctd-todo-api.herokuapp.com/v1/users/getMe",
@@ -93,7 +107,6 @@ fetch(
 
         skeletonRef.style.display = "none";
         taskRender()
-        
     });
 });
 
@@ -103,11 +116,9 @@ newTaskRef.addEventListener('click', event => {
     event.preventDefault()
 
     creatTask()
-    
 })
 
 closeAppRef.addEventListener('click', () => {
 
     logOutUser()
 })
-
