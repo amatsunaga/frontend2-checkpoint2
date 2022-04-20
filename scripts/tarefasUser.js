@@ -6,6 +6,8 @@ const ulTarefasRef = document.querySelector('.tarefas-pendentes')
 const ulTarefasTerminadasRef = document.querySelector('.tarefas-terminadas')
 const novaTarefaRef = document.querySelector('#novaTarea')
 const imagem = document.querySelector('.user-image')
+const check = document.querySelector('#darkMod')
+
 const darkButtonRef = document.querySelector('#darkMod')
 let BoddyDarkReference = document.querySelector('.d-dark')
 
@@ -227,8 +229,7 @@ function EditTarefa(idValue) {
                     response.json().then(data => {
 
                         atualizararray()
-                        //alert('Tarefa Editada Com sucesso!')
-                        //location.reload()
+                        
                     })
                 });
             }
@@ -292,6 +293,10 @@ function userImg() {
 //REsponsavel por mudar o tema de claro para escuro e virse-versa
 function modoDark() {
 
+    let BoryDarkReference = document.querySelector('.d-dark')
+    BoryDarkReference.classList.toggle('dark')
+    console.log(BoryDarkReference.checked)
+    userImg()
     //console.log(darkButtonRef.checked)
     if (darkButtonRef.checked === true) {
        

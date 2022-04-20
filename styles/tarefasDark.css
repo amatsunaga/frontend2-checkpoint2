@@ -3,6 +3,10 @@
     background-color: #a5a3a3;
     min-height: 100vh;
   }
+  .dark .d-dark {
+    background-color: #a5a3a3;
+    min-height: 100vh;
+  }
   .dark header {
     display: flex;
     background: linear-gradient(90deg, rgb(44, 44, 44), rgb(75, 72, 72));
