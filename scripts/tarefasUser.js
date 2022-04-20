@@ -6,6 +6,7 @@ const ulTarefasRef = document.querySelector('.tarefas-pendentes')
 const ulTarefasTerminadasRef = document.querySelector('.tarefas-terminadas')
 const novaTarefaRef = document.querySelector('#novaTarea')
 const imagem = document.querySelector('.user-image')
+const check = document.querySelector('#darkMod')
 
 
 //Variavel de configuração dos herder utilizado nas requisições da API
@@ -226,8 +227,7 @@ function EditTarefa(idValue) {
                     response.json().then(data => {
 
                         atualizararray()
-                        //alert('Tarefa Editada Com sucesso!')
-                        //location.reload()
+                        
                     })
                 });
             }
@@ -293,6 +293,7 @@ function modoDark() {
 
     let BoryDarkReference = document.querySelector('.d-dark')
     BoryDarkReference.classList.toggle('dark')
+    console.log(BoryDarkReference.checked)
     userImg()
 }
 
