@@ -1,13 +1,15 @@
 const userNameRef = document.querySelector('#userName')
 const closeAppRef = document.querySelector('#closeApp')
 const newTaskRef = document.querySelector('#newTask')
-const skeletonRef = document.querySelector('#skeleton')
+//const skeletonRef = document.querySelector('#skeleton')
 const ulTarefasRef = document.querySelector('.tarefas-pendentes')
 const ulTarefasTerminadasRef = document.querySelector('.tarefas-terminadas')
 const novaTarefaRef = document.querySelector('#novaTarea')
 const imagem = document.querySelector('.user-image')
 const check = document.querySelector('#darkMod')
 
+const darkButtonRef = document.querySelector('#darkMod')
+let BoddyDarkReference = document.querySelector('.d-dark')
 
 //Variavel de configuração dos herder utilizado nas requisições da API
 const requestHeaders = {
@@ -295,6 +297,18 @@ function modoDark() {
     BoryDarkReference.classList.toggle('dark')
     console.log(BoryDarkReference.checked)
     userImg()
+    //console.log(darkButtonRef.checked)
+    if (darkButtonRef.checked === true) {
+       
+        BoddyDarkReference.classList.add('dark')
+        pokeImg()
+
+    } else if (darkButtonRef.checked === false) {
+        
+        BoddyDarkReference.classList.remove('dark')
+        userImg()
+
+    }
 }
 
 
