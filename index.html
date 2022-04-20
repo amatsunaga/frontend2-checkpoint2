@@ -1,62 +1,80 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To-Do App</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>To-Do App</title>
 
-    <!-- ---------------- estilos compartilhados entre login e signup ---------------- -->
-    <link rel="stylesheet" href="styles/acesso.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/sweetalert2.css">
+        <!-- ---------------- estilos compartilhados entre login e signup ---------------- -->
+        <link rel="stylesheet" href="styles/acesso.css" />
+        <link
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./styles/loaders.css" />
+        <link rel="stylesheet" href="./styles/sweetalert2.css" />
 
-  <!-- ------------------- Biblioteca de icones - Fontawesome -------------------- -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- ------------------- Biblioteca de icones - Fontawesome -------------------- -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
 
-  <!-- ----------------------------- sweet alert ----------------------------- -->
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <!-- CDN example (unpkg) -->
-  <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+        <!-- ----------------------------- sweet alert ----------------------------- -->
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <!-- CDN example (unpkg) -->
+        <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  </head>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    </head>
 
-  <body>
-    <div class="left">
-      <img src="./assets/pessoa-login.png" alt="" />
-    </div>
-
-    <div class="right">
-      <form>
-        <div class="form-header">
-          <p>To-Do App</p>
+    <body>
+        <div class="left">
+            <img src="./assets/pessoa-login.png" alt="" />
         </div>
-        <h1>Acessar</h1>
 
-        <label>
-          Email:
-          <input id="inputEmail" type="email" required />
-          <span id="spanEmailIndex">Insira um email no formato correto</span>
-        </label>
-        <label>
-          Senha:
-          <input id="inputPassword" type="password" required minlength="8" />
-          <span id="spanSenha">A senha deve ter pelo menos 8 caracteres</span>
-        </label>
+        <div class="right">
+            <form>
+                <div class="form-header">
+                    <p>To-Do App</p>
+                </div>
+                <h1>Acessar</h1>
 
-        <button type="submit" id="buttonLogin" disabled>Acessar</button>
-      </form>
-      <div class="ingressar">
-        <a href="signup.html">Não possui conta? Crie agora mesmo</a>
-      </div>
-    </div>
+                <label>
+                    Email:
+                    <input id="inputEmail" type="email" required />
+                    <span id="spanEmail"
+                        >Insira um email no formato correto</span
+                    >
+                </label>
+                <label>
+                    Senha:
+                    <input
+                        id="inputPW"
+                        type="password"
+                        required
+                        minlength="8"
+                    />
+                    <span id="spanPW"
+                        >A senha deve ter pelo menos 8 caracteres</span
+                    >
+                </label>
 
-    <!-- ---------------------- lógica aplicada no login ----------------------- -->
-    <script src="./scripts/indexValidation.js"></script>
-    <script src="./scripts/login.js"></script>
-    <script src="./scripts/sweetalert2.js"></script>
-  </body>
+                <button type="submit" id="buttonLogin" disabled>Acessar</button>
+            </form>
+            <div class="ingressar">
+                <a href="signup.html">Não possui conta? Crie agora mesmo</a>
+            </div>
+        </div>
+
+        <!-- ---------------------- lógica aplicada no login ----------------------- -->
+        <script src="./scripts/indexValidation.js" type="module"></script>
+        <script src="./scripts/login.js" type="module"></script>
+        <script src="./scripts/loaders.js"></script>
+        <script src="./scripts/sweetalert2.js"></script>
+    </body>
 </html>

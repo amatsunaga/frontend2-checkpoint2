@@ -1,65 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To-Do App</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>To-Do App</title>
 
-    <!-- ---------------- estilos compartilhados entre login e signup ---------------- -->
-    <link rel="stylesheet" href="styles/acesso.css" />
-    <link rel="stylesheet" href="./styles/sweetalert2.css">
+        <!-- ---------------- estilos compartilhados entre login e signup ---------------- -->
+        <link rel="stylesheet" href="styles/acesso.css" />
+        <link rel="stylesheet" href="./styles/sweetalert2.css" />
+        <link rel="stylesheet" href="./styles/loaders.css" />
 
-    <!-- ---------------------- lógica aplicada no registro -------------------- 
+        <!-- ---------------------- lógica aplicada no registro -------------------- 
     <script src="/scripts/utils.js"></script>
     <script src="/scripts/signup.js"></script> -->
-  </head>
+    </head>
 
-  <body>
-    <div class="left">
-      <img src="./assets/pessoa-signup.png" alt="" />
-    </div>
-    <div class="right">
-      <form>
-        <div class="form-header">
-          <p>To-Do App</p>
+    <body>
+        <div class="left">
+            <img src="./assets/pessoa-signup.png" alt="" />
         </div>
+        <div class="right">
+            <form>
+                <div class="form-header">
+                    <p>To-Do App</p>
+                </div>
 
-        <label>
-          Nome:
-          <input type="text" id="name" required minlength="3" />
-          <span id="spanNome">Insira seu nome</span>
-        </label>
-        <label>
-          Sobrenome:
-          <input type="text" id="lastName" required minlength="3" />
-          <span id="spanSobrenome">Insira seu sobrenome</span>
-        </label>
-        <label>
-          Email:
-          <input type="email" id="mail" required />
-          <span id="spanEmailSignUp">Insira um email no formato correto</span>
-        </label>
-        <label>
-          Senha:
-          <input type="password" id="passW" required minlength="8" />
-          <span id="spanSenhaSignUp"
-            >A senha deve ter pelo menos 8 caracteres</span
-          >
-        </label>
-        <label>
-          Repetir senha:
-          <input type="password" id="passWValidation" required />
-          <span id="spanPWValidationSignUp">A senha não confere</span>
-        </label>
+                <label>
+                    Nome:
+                    <input type="text" id="name" required minlength="3" />
+                    <span id="spanName">Insira seu nome</span>
+                </label>
+                <label>
+                    Sobrenome:
+                    <input type="text" id="lastName" required minlength="3" />
+                    <span id="spanLastName">Insira seu sobrenome</span>
+                </label>
+                <label>
+                    Email:
+                    <input type="email" id="mail" required />
+                    <span id="spanEmailSignUp"
+                        >Insira um email no formato correto</span
+                    >
+                </label>
+                <label>
+                    Senha:
+                    <input type="password" id="passW" required minlength="8" />
+                    <span id="spanPWSignUp"
+                        >A senha deve ter pelo menos 8 caracteres</span
+                    >
+                </label>
+                <label>
+                    Repetir senha:
+                    <input type="password" id="passWValidation" required />
+                    <span id="spanPWValidationSignUp">A senha não confere</span>
+                </label>
 
-        <button id="signUp" disabled>Criar conta</button>
-      </form>
-      <div class="ingressar">
-        <a href="index.html">Já possui conta? Acesse aqui</a>
-      </div>
-    </div>
-    <script src="./scripts/signup.js"></script>
-    <script src="./scripts/sweetalert2.js"></script>
-  </body>
+                <button id="signUp" disabled>Criar conta</button>
+            </form>
+            <div class="ingressar">
+                <a href="./index.html">Já possui conta? Acesse aqui</a>
+            </div>
+        </div>
+        <!-- ---------------------- lógica aplicada no registro -------------------- -->
+        <script src="./scripts/signup.js"></script>
+        <script src="./scripts/loaders.js"></script>
+        <script src="./scripts/sweetalert2.js"></script>
+    </body>
 </html>

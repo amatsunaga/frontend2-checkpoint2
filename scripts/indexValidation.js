@@ -1,39 +1,35 @@
-let emailReferencia = document.querySelector("#inputEmail");
-let senhaReferencia = document.querySelector("#inputPassword");
-let spanEmailIndexRef = document.querySelector("#spanEmailIndex");
-let spanSenha = document.querySelector("#spanSenha");
-let buttonReferencia = document.querySelector("button");
-let emailValido = false;
-let senhaValida = false;
+import { inputEmailRef, inputPWRef, buttonRef } from "./login.js"
+
+const spanEmailRef = document.querySelector("#spanEmail")
+const spanPWRef = document.querySelector("#spanPW")
+
+let validEmail = false
+let validPW = false
 
 function validateLogin() {
-  if (emailValido && senhaValida) {
-    buttonReferencia.disabled = false;
-  } else {
-    buttonReferencia.disabled = true;
-  }
+    if (validEmail && validPW) {
+        buttonRef.disabled = false
+    } else {
+        buttonRef.disabled = true
+    }
 }
 
-emailReferencia.addEventListener("keyup", () => {
-  emailValido = emailReferencia.checkValidity();
-  if (emailValido) {
-    spanEmailIndex.classList.remove("show");
-  } else {
-    spanEmailIndex.classList.add("show");
-  }
-  validateLogin();
-});
+inputEmailRef.addEventListener("keyup", () => {
+    validEmail = inputEmailRef.checkValidity()
+    if (validEmail) {
+        spanEmailRef.classList.remove("show")
+    } else {
+        spanEmailRef.classList.add("show")
+    }
+    validateLogin()
+})
 
-senhaReferencia.addEventListener("keyup", () => {
-  senhaValida = senhaReferencia.checkValidity();
-  if (senhaValida) {
-    spanSenha.classList.remove("show");
-  } else {
-    spanSenha.classList.add("show");
-  }
-  validateLogin();
-});
-
-buttonReferencia.addEventListener("click", function (event) {
-  event.preventDefault();
-});
+inputPWRef.addEventListener("keyup", () => {
+    validPW = inputPWRef.checkValidity()
+    if (validPW) {
+        spanPWRef.classList.remove("show")
+    } else {
+        spanPWRef.classList.add("show")
+    }
+    validateLogin()
+})
